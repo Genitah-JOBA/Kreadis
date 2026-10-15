@@ -127,7 +127,7 @@ export default function Project() {
           <div className="case-goals">
             {project.goals.map((g) => (
               <div key={g.label}>
-                <strong className="gradient-text">{g.value}</strong>
+                <strong className="accent-text">{g.value}</strong>
                 <span>{g.label}</span>
               </div>
             ))}

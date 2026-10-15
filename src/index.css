@@ -1,13 +1,13 @@
 :root {
   --bg: #0b0b14;
-  --bg-alt: #11111d;
+  --bg-alt: #0b0b14; /* fond uni : même couleur que --bg */
   --surface: #171726;
   --border: rgba(255, 255, 255, 0.08);
   --text: #ecebf5;
   --muted: #a2a1b8;
   --primary: #7c5cff;
+  --primary-hover: #6a48f5;
   --accent: #22d3ee;
-  --gradient: linear-gradient(135deg, #7c5cff 0%, #22d3ee 100%);
   --radius: 20px;
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
   --font-head: 'Sora', system-ui, sans-serif;
@@ -78,11 +78,8 @@ p {
   margin-inline: auto;
 }
 
-.gradient-text {
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.accent-text {
+  color: var(--primary);
 }
 
 .eyebrow {
@@ -120,13 +117,12 @@ p {
 }
 
 .btn-primary {
-  background: var(--gradient);
+  background: var(--primary);
   color: #fff;
-  box-shadow: 0 10px 30px rgba(124, 92, 255, 0.35);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 14px 40px rgba(124, 92, 255, 0.5);
+  background: var(--primary-hover);
 }
 
 .btn-ghost {
@@ -205,31 +201,6 @@ p {
   overflow: hidden;
 }
 
-.glow {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.45;
-  pointer-events: none;
-}
-
-.glow-1 {
-  width: 520px;
-  height: 520px;
-  background: var(--primary);
-  top: -180px;
-  left: -160px;
-}
-
-.glow-2 {
-  width: 460px;
-  height: 460px;
-  background: var(--accent);
-  bottom: -220px;
-  right: -120px;
-  opacity: 0.25;
-}
-
 .hero-grid {
   position: relative;
   display: grid;
@@ -262,7 +233,7 @@ p {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--gradient);
+  background: var(--primary);
   margin-right: 0.5rem;
   vertical-align: middle;
 }
@@ -424,7 +395,7 @@ p {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, var(--surface) 0%, transparent 60%);
+  background: rgba(23, 23, 38, 0.25);
 }
 
 .service-icon {
@@ -437,7 +408,7 @@ p {
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  background: var(--gradient);
+  background: var(--primary);
   color: #fff;
   box-shadow: 0 8px 20px rgba(124, 92, 255, 0.4);
 }
@@ -494,7 +465,7 @@ p {
 }
 
 .filters button.active {
-  background: var(--gradient);
+  background: var(--primary);
   border-color: transparent;
   color: #fff;
 }
@@ -532,7 +503,7 @@ p {
   flex-direction: column;
   justify-content: flex-end;
   padding: 1.5rem;
-  background: linear-gradient(to top, rgba(8, 8, 16, 0.95) 0%, rgba(8, 8, 16, 0.2) 55%, transparent 100%);
+  background: rgba(8, 8, 16, 0.62);
 }
 
 .project-overlay h3 {
@@ -612,10 +583,7 @@ p {
   font-family: var(--font-head);
   font-size: 2.6rem;
   font-weight: 800;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--primary);
   margin-bottom: 0.8rem;
 }
 
@@ -681,7 +649,7 @@ p {
   width: 1.3rem;
   height: 1.3rem;
   border-radius: 50%;
-  background: var(--gradient);
+  background: var(--primary);
   font-size: 0.75rem;
   font-weight: 700;
   color: #fff;
@@ -694,10 +662,7 @@ p {
   gap: 3rem;
   padding: 3.5rem;
   border-radius: 28px;
-  background:
-    radial-gradient(circle at 0% 0%, rgba(124, 92, 255, 0.22), transparent 50%),
-    radial-gradient(circle at 100% 100%, rgba(34, 211, 238, 0.14), transparent 50%),
-    var(--surface);
+  background: var(--surface);
   border: 1px solid var(--border);
 }
 
@@ -837,7 +802,7 @@ p {
 
 .socials a:hover {
   color: #fff;
-  background: var(--gradient);
+  background: var(--primary);
   border-color: transparent;
 }
 

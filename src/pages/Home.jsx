@@ -35,13 +35,11 @@ const serviceIcons = {
 function Hero() {
   return (
     <section className="hero" id="top">
-      <div className="glow glow-1" />
-      <div className="glow glow-2" />
       <div className="container hero-grid">
         <div className="hero-text reveal">
           <span className="eyebrow">Agence digitale · Design & Développement</span>
           <h1>
-            Des expériences <span className="gradient-text">digitales</span> pensées pour faire grandir
+            Des expériences <span className="accent-text">digitales</span> pensées pour faire grandir
             votre activité.
           </h1>
           <p className="lead">
@@ -93,7 +91,7 @@ function Values() {
       <div className="container values-grid">
         {values.map((v) => (
           <div className="value reveal" key={v.label}>
-            <strong className="gradient-text">{v.value}</strong>
+            <strong className="accent-text">{v.value}</strong>
             <span>{v.label}</span>
           </div>
         ))}
