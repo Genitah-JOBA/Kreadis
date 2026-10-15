@@ -1,0 +1,129 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  /* Couverture Google Business 1640 x 924 (16:9), même contenu que la couverture Facebook, style "agence" : fond noir, téléphone et orbites en traits fins, couleurs unies.
+     Zone toujours visible (mobile) : x 265 → 1375 */
+  html, body { margin: 0; width: 1640px; height: 924px; overflow: hidden; }
+  .stage { position: absolute; left: 0; top: 150px; width: 1640px; height: 624px; }
+  #wave { overflow: visible; }
+  body { position: relative; background: #08080d; font-family: 'Montserrat', sans-serif; color: #f3f2fa; }
+
+  #wave { position: absolute; inset: 0; }
+
+  /* K fantôme en filigrane */
+  .ghost { position: absolute; left: 150px; top: 70px; width: 470px; height: 470px; }
+
+  .logo { position: absolute; left: 300px; top: 52px; display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 24px; letter-spacing: .02em; }
+  .logo svg { width: 40px; height: 40px; }
+
+  .left { position: absolute; left: 300px; top: 205px; text-transform: uppercase; line-height: .95; }
+  .left .big { font-weight: 900; font-size: 66px; letter-spacing: -0.01em; display: block; }
+  .left .thin { font-weight: 500; font-size: 37px; letter-spacing: .02em; display: block; margin-top: 12px; }
+  .left .thin b { color: #7c5cff; font-weight: 800; }
+
+  .right { position: absolute; right: 290px; top: 178px; text-align: right; text-transform: uppercase; line-height: 1.05; }
+  .right .row1 { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; font-weight: 800; font-size: 20px; }
+  .accent { color: #7c5cff; }
+  .right .xl { font-weight: 900; font-size: 38px; display: block; margin: 4px 0 2px; }
+  .right .md { font-weight: 800; font-size: 20px; display: block; }
+  .right .lg { font-weight: 900; font-size: 30px; display: block; }
+  .right .gap { height: 34px; }
+  .dot { position: absolute; width: 22px; height: 22px; border-radius: 50%; background: #f3f2fa; left: 1010px; top: 150px; }
+
+  .foot { position: absolute; bottom: 52px; font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+  .foot svg { width: 16px; height: 16px; }
+  .f1 { left: 300px; } .f2 { right: 290px; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <svg id="wave" viewBox="0 0 1640 624" xmlns="http://www.w3.org/2000/svg"></svg>
+
+  <svg class="ghost" viewBox="0 0 64 64"><path d="M17 13h8v15.5L38 13h10L34.5 29 49 51H39L28 34.5 25 38v13h-8z" fill="#121220"/></svg>
+
+  <div class="logo">
+    <svg viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="#ecebf5"/><path d="M17 13h8v15.5L38 13h10L34.5 29 49 51H39L28 34.5 25 38v13h-8z" fill="#08080d"/><circle cx="49" cy="49" r="7" fill="#7c5cff" stroke="#ecebf5" stroke-width="3"/></svg>
+    KREADIS
+  </div>
+
+  <div class="left">
+    <span class="big">Studio</span>
+    <span class="big">Digital</span>
+    <span class="thin"><b>Freelance</b></span>
+  </div>
+
+  <span class="dot"></span>
+  <div class="right">
+    <div class="row1"><span class="accent">#Design UI/UX</span><span>Sur mesure</span></div>
+    <span class="xl">Création site web</span>
+    <span class="md accent">Application mobile</span>
+    <div class="gap"></div>
+    <span class="lg">Webmastering</span>
+    <span class="lg">Maintenance</span>
+    <span class="lg accent">SEO</span>
+  </div>
+
+  <div class="foot f1">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    038 14 611 05
+  </div>
+  <div class="foot f2">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    jobanitah@gmail.com
+  </div>
+
+  </div>
+<script>
+    // Visuel central en traits fins : orbites autour d'un téléphone et d'une fenêtre de site
+    const svg = document.getElementById('wave')
+    const cx = 755, cy = 312
+    const V = '#7c5cff', W = '#d6d5e3'
+    let out = ''
+
+    // Orbites inclinées (anneaux de lignes)
+    for (let i = 0; i < 14; i++) {
+      const rx = 150 + i * 13, ry = 300 + i * 4
+      out += `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" transform="rotate(${-28 + i * 1.2} ${cx} ${cy})"
+        fill="none" stroke="${i % 3 === 0 ? V : W}" stroke-opacity="${i % 3 === 0 ? 0.55 : 0.16}" stroke-width="1"/>`
+    }
+    // Petites planètes sur les orbites
+    out += `<circle cx="${cx - 190}" cy="${cy - 175}" r="6" fill="${V}"/>`
+    out += `<circle cx="${cx + 205}" cy="${cy + 190}" r="4" fill="${W}"/>`
+
+    // Fenêtre de navigateur (derrière, décalée)
+    const bx = cx - 125, by = cy - 150, bw = 200, bh = 150
+    out += `<g transform="rotate(-8 ${cx} ${cy})">
+      <rect x="${bx}" y="${by}" width="${bw}" height="${bh}" rx="12" fill="#08080d" stroke="${W}" stroke-opacity=".7" stroke-width="1.5"/>
+      <line x1="${bx}" y1="${by + 26}" x2="${bx + bw}" y2="${by + 26}" stroke="${W}" stroke-opacity=".5"/>
+      <circle cx="${bx + 14}" cy="${by + 13}" r="4" fill="none" stroke="${W}"/><circle cx="${bx + 28}" cy="${by + 13}" r="4" fill="none" stroke="${W}"/><circle cx="${bx + 42}" cy="${by + 13}" r="4" fill="${V}"/>
+      <rect x="${bx + 16}" y="${by + 42}" width="${bw - 32}" height="52" rx="6" fill="none" stroke="${V}" stroke-width="1.5"/>
+      <line x1="${bx + 28}" y1="${by + 60}" x2="${bx + 120}" y2="${by + 60}" stroke="${W}" stroke-width="3" stroke-linecap="round"/>
+      <line x1="${bx + 28}" y1="${by + 75}" x2="${bx + 90}" y2="${by + 75}" stroke="${W}" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+      ${[0, 1, 2].map(k => `<rect x="${bx + 16 + k * 59}" y="${by + 104}" width="52" height="36" rx="6" fill="none" stroke="${W}" stroke-opacity=".45"/>`).join('')}
+    </g>`
+
+    // Téléphone (devant)
+    const pw = 150, ph = 300, px = cx - pw / 2 + 45, py = cy - ph / 2 + 10
+    out += `<g transform="rotate(10 ${px + pw / 2} ${py + ph / 2})">
+      <rect x="${px}" y="${py}" width="${pw}" height="${ph}" rx="24" fill="#08080d" stroke="${W}" stroke-width="2"/>
+      <rect x="${px + pw / 2 - 22}" y="${py + 10}" width="44" height="8" rx="4" fill="${W}" fill-opacity=".6"/>
+      <rect x="${px + 14}" y="${py + 32}" width="${pw - 28}" height="70" rx="10" fill="${V}"/>
+      <line x1="${px + 26}" y1="${py + 56}" x2="${px + 90}" y2="${py + 56}" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+      <line x1="${px + 26}" y1="${py + 74}" x2="${px + 70}" y2="${py + 74}" stroke="#fff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round"/>
+      ${[0, 1, 2].map(k => {
+        const y = py + 116 + k * 44
+        return `<rect x="${px + 14}" y="${y}" width="${pw - 28}" height="34" rx="8" fill="none" stroke="${W}" stroke-opacity=".5"/>
+          <circle cx="${px + 31}" cy="${y + 17}" r="8" fill="none" stroke="${V}" stroke-width="2"/>
+          <line x1="${px + 47}" y1="${y + 13}" x2="${px + 105}" y2="${y + 13}" stroke="${W}" stroke-opacity=".7" stroke-width="3" stroke-linecap="round"/>
+          <line x1="${px + 47}" y1="${y + 22}" x2="${px + 85}" y2="${y + 22}" stroke="${W}" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>`
+      }).join('')}
+      <rect x="${px + 14}" y="${py + ph - 46}" width="${pw - 28}" height="28" rx="14" fill="${V}"/>
+    </g>`
+
+    svg.innerHTML = out
+  </script>
+</body>
+</html>
