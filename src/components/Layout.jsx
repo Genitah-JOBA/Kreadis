@@ -118,9 +118,11 @@ export function Footer() {
           <a href={contact.facebook} aria-label="Facebook" target="_blank" rel="noreferrer">
             <FacebookIcon />
           </a>
-          <a href={contact.linkedin} aria-label="LinkedIn" target="_blank" rel="noreferrer">
-            <LinkedinIcon />
-          </a>
+          {contact.linkedin && (
+            <a href={contact.linkedin} aria-label="LinkedIn" target="_blank" rel="noreferrer">
+              <LinkedinIcon />
+            </a>
+          )}
         </div>
       </div>
     </footer>

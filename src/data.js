@@ -5,13 +5,12 @@ const img = (id, w = 1200) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`
 
 export const contact = {
-  // ⚠️ Liens des réseaux sociaux à compléter
   email: 'jobanitah@gmail.com',
   phone: '038 14 611 05',
   phoneLink: '+261381461105', // format international pour le lien d'appel
   location: 'Freelance',
-  facebook: 'https://facebook.com/kreadis',
-  linkedin: 'https://linkedin.com/company/kreadis',
+  facebook: 'https://www.facebook.com/profile.php?id=61595156322180',
+  linkedin: '', // à renseigner quand la page LinkedIn existera (vide = icône masquée)
 }
 
 export const heroImage = img('photo-1551650975-87deedd944c3', 1400)
