@@ -5,7 +5,7 @@ const img = (id, w = 1200) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`
 
 export const contact = {
-  email: 'jobanitah@gmail.com',
+  email: 'kreadis.digital@gmail.com',
   phone: '038 14 611 05',
   phoneLink: '+261381461105', // format international pour le lien d'appel
   location: 'Freelance',
